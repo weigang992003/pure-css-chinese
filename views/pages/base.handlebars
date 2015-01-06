@@ -1,63 +1,63 @@
-{{setTitle     "Base"}}
-{{setSubTitle  "Leveraging Normalize.css, an HTML5-ready alternative to CSS resets."}}
+{{setTitle     "基础"}}
+{{setSubTitle  "Pure基于Normalize.css（一个支持HTML5的CSS重置文件）"}}
 {{setActiveNav "base"}}
 
 {{> header}}
 
 <div class="content">
-    {{sectionHeading "The Foundation"}}
+    {{sectionHeading "基础"}}
     <p>
-        All modules in Pure build on top of <a href="http://necolas.github.com/normalize.css/">Normalize.css</a>. It's our foundational layer to maintain some degree of cross-browser consistency. We use Normalize v1.x because it supports older versions of Internet Explorer. We like Normalize so much that we put it on our CDN. You can pull in Normalize.css by adding this {{code "<link>"}} element on your page:
+        所有Pure模块都是基于<a href="http://necolas.github.com/normalize.css/">Normalize.css</a>构建的。它是我们的基础层，一定程度上保证了跨浏览器的一致性。我们使用Normalize的v1.x版本，因为他支持旧版的IE。我们深深地热爱Normalize，所以把它放在了我们的CDN服务器上。你可以引用下面的代码引入Normalize.css。
     </p>
 
     {{#code wrap=true}}
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/{{pure.version}}/base-min.css">
     {{/code}}
 
-    <h3>A bit about Normalize.css</h3>
+    <h3>Normalize.css点滴</h3>
     <p>
-        <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> is an open-source project by <a href="http://twitter.com/necolas">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal">Jonathan Neal</a>. <a href="http://nicolasgallagher.com/about-normalize-css/">In their own words</a>:
+        <a href="http://necolas.github.com/normalize.css/">Normalize.css</a>是<a href="http://twitter.com/necolas">Nicolas Gallagher</a>和<a href="http://twitter.com/jon_neal">Jonathan Neal</a>的开源项目。<a href="http://nicolasgallagher.com/about-normalize-css/">用他们的话说</a>:
     </p>
 
     <blockquote class="content-quote">
-        Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset."
+		"Normalize.css是一个小的CSS文件，为HTML元素样式提供跨浏览器的一致性。它是一个现代的、支持HTML5的、传统CSS重置的替代。"
     </blockquote>
 
     <p>
-        Normalize.css comes with <a href="https://github.com/necolas/normalize.css/wiki">great documentation</a> and a <a href="http://nicolasgallagher.com/about-normalize-css/">thorough guide</a> explaining how it differs from a traditional reset. You can also check out YUI's <a href="http://yuilibrary.com/yui/docs/cssnormalize/">CSSNormalize</a> module, which includes the generic Normalize along with a <a href="http://yuilibrary.com/yui/docs/cssnormalize/#context">contextual version</a>. The contextual version of Normalize only applies normalized styles to elements that are children of an element with the class name {{code "yui3-normalized"}}.
+        Normalize.css有<a href="https://github.com/necolas/normalize.css/wiki">大量的文档</a>和<a href="http://nicolasgallagher.com/about-normalize-css/">详尽的指南</a>(解释了它同传统CSS重置的区别)。你也可以查看YUI的<a href="http://yuilibrary.com/yui/docs/cssnormalize/">CSSNormalize</a>模块，它包含了通用的Normalize以及一个<a href="http://yuilibrary.com/yui/docs/cssnormalize/#context">上下文版</a>。这个上下文版的Normallize只适用于标准化的子元素，他们的父元素必须包含class {{code "yui3-normalized"}}。
     </p>
 
-    {{sectionHeading "Extras"}}
+    {{sectionHeading "扩展"}}
     <p>
-        In addition to Normalize.css rules, Pure's Base module contains some common styles that are used by most websites.
+        除了Normalize.css的规则，Pure的基础模块，包含大多数网站常用的一些样式。
     </p>
 
-    <h3>Hiding Elements</h3>
+    <h3>隐藏元素</h3>
 
     <p>
-        Add the {{code "hidden"}} attribute to an HTML element to hide it from the screen via {{code "display: none !important;"}}.
+        HTML元素添加{{code "hidden"}}属性，可实现隐藏效果{{code "display: none !important;"}}。
     </p>
 
     {{#code "html"}}
     <input type="text" name="_csrf" hidden>
     {{/code}}
 
-    <h3>Responsive Images</h3>
+    <h3>响应式的图片</h3>
 
     <p>
-        Add the {{code ".pure-img"}} class name to an {{code "<img>"}} element to make it scale with the viewport. This is handy when building responsive websites.
+        {{code "<img>"}}添加class{{code ".pure-img"}}，配合viewport可实现图片伸缩，做响应式网站的时候比较有用。
     </p>
 
     {{#code "html"}}
     <img class="pure-img" src="...">
     {{/code}}
 
-    {{sectionHeading "Moving beyond Normalize"}}
+    {{sectionHeading "超越Normalize"}}
     <p>
-        Normalize.css is a great starting place for your project, but some HTML elements such as forms, tables, and menus require more styling than what's provided by Normalize.
+        Normalize.css是创建项目的一个很好的起点，但是很多元素比如表单、表格和菜单，需要更好的样式，Normalize不能提供。
     </p>
 
     <p>
-        We made a more opinionated look and feel for these elements, while keeping them minimal enough so that you can customize them for your site or app's needs. Check out our CSS for <a href="{{pathTo 'forms'}}">Forms</a>, <a href="{{pathTo 'tables'}}">Tables</a>, and <a href="{{pathTo 'menus'}}">Menus</a>.
+        Pure为这些元素提供了更个性化的样式，但是为了保持足够小，只满足最基本的需求，你可以在此基础上进行自定义。请查看Pure提供的样式：<a href="{{pathTo 'forms'}}">表单</a>、<a href="{{pathTo 'tables'}}">表格</a>和<a href="{{pathTo 'menus'}}">菜单</a>。
     </p>
 </div>

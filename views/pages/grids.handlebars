@@ -1,5 +1,5 @@
-{{setTitle         "Grids"}}
-{{setSubTitle      "Fully customizable and responsive CSS grids."}}
+{{setTitle         "栅格"}}
+{{setSubTitle      "完全自定义的响应式栅格系统"}}
 {{setActiveNav     "grids"}}
 {{setIncludePureGR true}}
 
@@ -9,42 +9,42 @@
 {{> header}}
 
 <div class="content">
-    {{sectionHeading "Introduction to Pure Grids"}}
+    {{sectionHeading "Pure栅格系统简介"}}
 
     <p>
-        Pure Grids are easy to work with, and very powerful. There are a few simple concepts to keep in mind:
+        Pure栅格系统使用简单且功能强悍。几个简单的概念需要知道：
     </p>
 
     <dl>
-        <dt>Grid classes vs. unit classes</dt>
+        <dt>栅格class 与 单元格class</dt>
         <dd>
-            Pure Grids consist of two types of classes: the grid class ({{code "pure-g"}}) and unit classes ({{code "pure-u"}} or {{code "pure-u-*"}})
+            Pure栅格系统有两种class组成：栅格 class ({{code "pure-g"}}) 和 单元格 class ({{code "pure-u"}} 或 {{code "pure-u-*"}})。栅格类似Excel的表格，由单元格组成。
         </dd>
 
-        <dt>The widths of the units are fractions</dt>
+        <dt>单元格的宽度是分数</dt>
         <dd>
-            Units have various class names that represent their widths. For example, {{code "pure-u-1-2"}} has a width of 50%, whereas {{code "pure-u-1-5"}} would have a width of 20%.
+            单元格用不同的class名表示宽度。比如 {{code "pure-u-1-2"}} 表示宽1/2即50%， 同样 {{code "pure-u-1-5"}} 表示宽1/5即20%。
         </dd>
 
-        <dt>All child elements of a grid must be units</dt>
+        <dt>栅格的所有子元素必须是单元格</dt>
         <dd>
-            Child elements contained within an element with a {{code "pure-g"}} classname <em>must</em> be a grid unit with a {{code "pure-u"}} or {{code "pure-u-*"}} classname.
+            栅格，即class名包含{{code "pure-g"}}的元素，它的子元素必须是单元格，即class名包含 {{code "pure-u"}} 或 {{code "pure-u-*"}}的元素。
         </dd>
 
-        <dt>Content goes inside grid units<dt>
+        <dt>内容在单元格中<dt>
         <dd>
-            All content which is visible to people needs to be contained inside a grid unit. This ensures that the content will be rendered properly.
+           所有需要显示的内容都要放在单元格中。这样才能保证内容正确的显示。
         </dd>
     </dl>
 
     <aside>
         <p>
-            When setting a {{code "font-family"}} in your project, be sure to check out the section on <a href="#using-grids-with-custom-fonts">using Grids with your font-family</a>.
+            在你的项目中设置{{code "font-family"}}的时候，请查看<a href="#using-grids-with-custom-fonts">自定义栅格的font-family</a>.
         </p>
     </aside>
 
     <p>
-        Let's start with a simple example. Here's a grid with three columns:
+        看一个简单的栅格包含3列:
     </p>
 
   {{#code}}
@@ -52,41 +52,41 @@
   {{/code}}
 
 
-    {{sectionHeading "Grids Units Sizes"}}
+    {{sectionHeading "栅格单元格大小"}}
 
     <p>
-        Pure ships with both a <b>5ths</b> and <b>24ths</b> based grid. Depicted below are the available units that can be appended to the <b>{{code "pure-u-*"}}</b> classname where {{code "*"}} is one of the unit factions listed below. For example the unit classname for 50% width is: {{code "pure-u-1-2"}}.
+        Pure栅格默认支持<b>5列</b>和<b>24列</b>。下图列出了可以替换单元格class名<b>{{code "pure-u-*"}}</b>中{{code "*"}}的分数。比如用{{code "1-2"}}替换{{code "*"}}，class名就是{{code "pure-u-1-2"}}，表示宽1/2，即50%。
     </p>
 
-    <h3>5ths-Based Units</h3>
+    <h3>基于5列的单元格</h3>
 
   {{#each pure.gridunits.n5}}
     {{> grids/grids-unit}}
   {{/each}}
 
-    <h3>24ths-Based Units</h3>
+    <h3>基于24列的单元格</h3>
 
   {{#each pure.gridunits.n24}}
     {{> grids/grids-unit}}
   {{/each}}
 
-    <h3>Custom Unit Sizes</h3>
+    <h3>自定义单元格大小</h3>
 
     <p>
-        We are working on building tools to allow people to customize Pure Grids. The first low-level tools, the <b><a href="https://github.com/ericf/rework-pure-grids">Pure Grids Rework Plugin</a></b>, is available to use today&mdash;we use this tool to generate Pure's built-in unit sizes.
+        我们正在开发可自定义Pure栅格的工具。现在可用的是一个较低级的工具：<b><a href="https://github.com/ericf/rework-pure-grids">重新生产栅格插件</a></b>，我们用它生成Pure的内建单元格的大小。
     </p>
 
 
-    {{sectionHeading "Pure Responsive Grids"}}
+    {{sectionHeading "Pure的响应式栅格"}}
 
     <p>
-        Pure has a mobile-first responsive grid system that can be used declaratively through CSS class names. It's a robust and flexible grid  that builds on top of the default grid.
+        Pure同时提供一个移动设备优先的响应式的栅格系统，通过添加class名即可使用。它是一个强大并灵活的系统，基于默认的栅格系统。
     </p>
 
-    <h3>Including on Your Page</h3>
+    <h3>在页面中引用</h3>
 
     <p>
-        Since media queries cannot be over-written, we <u>do not</u> include the grid system as part of {{code "pure.css"}}. You'll have to pull it in as a separate CSS file. You can do this by adding the following {{code "<link>"}} tag to your page.
+        因为媒体查询不能被覆盖，所以我们<u>没有</u>在{{code "pure.css"}}中直接引用栅格系统。你需要引入单独的CSS文件。把下面的{{code "<link>"}} 引入页面即可。
     </p>
 
   {{#code}}
@@ -94,13 +94,13 @@
   {{/code}}
 
     <p>
-        Even though Pure Grids are designed to be mobile-first, you may want to show the "desktop-experience" to users who view your website in IE 8 or below. Just include the {{code "grids-responsive-old-ie.css"}} file inside an IE conditional statement and Pure Grids will adapt to show the desktop experience.
+        尽管Pure栅格系统设计为移动设备优先，但是你可能也希望用户使用IE8或更旧的IE版本也能正常浏览。那么判断用户浏览器后引入这个文件即可{{code "grids-responsive-old-ie.css"}}。
     </p>
 
-    <h3>Pure's Regular Grid vs. Responsive Grid</h3>
+    <h3>非响应式 vs. 响应式</h3>
 
     <p>
-        The best way to understand the difference between Pure's regular grid and a responsive grid is through an example.The snippet below shows how regular Pure Grids are written. These grids are unresponsive. They'll always be {{code "width: 33.33%"}}, irrespective of the width of the screen.
+        通过例子看下两者的区别。下面代码是一组非响应式的栅格，在任何屏幕上宽度都是{{code "width: 33.33%"}}。
     </p>
 
   {{#code}}
@@ -108,17 +108,17 @@
   {{/code}}
 
     <p>
-        Next, let's look at a responsive grid. Elements within this grid will be {{code "width: 100%"}} on small screens, but will shrink to become {{code "width: 33.33%"}} on medium-sized screens and above.
+        下面是一组响应式栅格，元素在小屏幕上宽{{code "width: 100%"}}，在中等屏幕变为{{code "width: 33.33%"}}。
     </p>
 
   {{#code}}
     {{> grids/compare-r}}
   {{/code}}
 
-    <h3>Default Media Queries</h3>
+    <h3>默认的媒体查询</h3>
 
     <p>
-        When using Responsive Grids, you can control how the grid behaves at specific breakpoints by adding class names. Pure's default responsive grids comes with the following class names and media query breakpoints.
+        那么大、中、小屏幕如何区分呢？Pure通过媒体查询进行判断，默认列表如下：
     </p>
 
     <div class="table-responsive">
@@ -127,18 +127,18 @@
 
     <aside>
         <p>
-            If you want to customize these media query breakpoints, head over to the <a href="{{pathTo 'start'}}#build-your-pure-starter-kit">Get Started</a> page and generate your own custom grid.
+            如果你想自定义这些媒体查询断点，<a href="{{pathTo 'start'}}#build-your-pure-starter-kit">请点这里</a>。
         </p>
     </aside>
 
-    <h3>Using Relative Units for Widths</h3>
+    <h3>相对长度单位</h3>
 
     <p>
-        You may have noticed that we use {{code "em"}} for our default CSS Media Query widths instead of {{code "px"}}. This was a conscious decision since it allows the Media Queries to respond appropriately when people zoom the webpage. Check out <a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative">this article by Brad Frost</a> for some background information on using relative units within Media Queries.
+        同志们都看到了，我们用{{code "em"}}作为媒体查询的宽度单位，而不是{{code "px"}}。这是考虑到媒体查询能适应网页的缩放，<a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative">不懂的请看这</a>。
     </p>
 
     <p>
-        If you do want to use units other than {{code "em"}}, you can always modify the default Media Queries on the <a href="{{pathTo 'start'}}#build-your-pure-starter-kit">Get Started</a> page. Converting from {{code "em"}} to {{code "px"}} is pretty simple:
+        如果你不想用{{code "em"}}，你可以<a href="{{pathTo 'start'}}#build-your-pure-starter-kit">在这修改</a>。{{code "em"}} 转 {{code "px"}} :
     </p>
 
     {{#code "generic"}}
@@ -147,18 +147,18 @@
 
     <p>
         <small>
-            * The {{code "em"}} to {{code "px"}} conversion is based on the browser's default font size, which is generally {{code "16px"}}, but can be overridden by a user in their browser settings.
+            * {{code "em"}} 转 {{code "px"}} 是基于浏览器的默认字体大小，一般是{{code "16px"}}，但是也可能在浏览器设置里被修改了。
         </small>
     </p>
 
-    <h3>An Example of Pure Responsive Grids</h3>
+    <h3>响应式栅格的实例</h3>
 
     <p>
-        The example below leverages Pure's Responsive Grid to create a row with four columns. The columns stack on small screens, take up {{code "width: 50%"}} on medium-sized screens, and {{code "width: 25%"}} on large screens.
+        我们创建一个包含4个单元格的栅格。每个单元格在小屏幕上宽{{code "width: 100%"}}，中屏幕{{code "width: 50%"}}，大屏幕{{code "width: 25%"}}。
     </p>
 
     <p>
-        This is done by adding the {{code ".pure-u-1"}} class for small screens, {{code ".pure-u-md-1-2"}} for medium-sized screens, and {{code ".pure-u-lg-1-4"}} for large screens. <em>Resize the page to see the grid respond to the screen size.</em>
+        对应小屏幕的class是{{code ".pure-u-1"}}，中屏幕{{code ".pure-u-md-1-2"}}，大屏幕 {{code ".pure-u-lg-1-4"}}。<em>缩放浏览器可以看到效果。</em>
     </p>
 </div>
 
@@ -167,10 +167,10 @@
 </div>
 
 <div class="content">
-    {{sectionHeading "Grids on Mobile"}}
+    {{sectionHeading "移动端栅格"}}
 
     <p>
-        Pure's default grid system is mobile-first. If you want to have a grid on small screens, just use the {{code "pure-u-*"}} classnames on your elements.
+        Pure的栅格系统默认移动端优先。想要在移动端使用栅格系统，加class {{code "pure-u-*"}} 在相应的元素上就可以了。
     </p>
 </div>
 
@@ -179,10 +179,10 @@
 </div>
 
 <div class="content">
-    {{sectionHeading "Responsive Images"}}
+    {{sectionHeading "响应式图片"}}
 
     <p>
-        When using Responsive Grids, you'll want your images to be fluid as well so they grow and shrink with the content, while maintaining the correct ratio. To do this, just add the {{code ".pure-img"}} class on them. Check out the example below.
+        使用响应式栅格时，你肯定也希望图片能够伸缩，以保持正确的比例。给图片加个class {{code ".pure-img"}} 就搞定了。缩放浏览器看下面的例子。
     </p>
 </div>
 
@@ -191,10 +191,10 @@
 </div>
 
 <div class="content">
-    {{sectionHeading "Applying Padding and Borders to Grid Units"}}
+    {{sectionHeading "设置单元格的padding和border"}}
 
     <p>
-        To add borders and padding to Pure Grids, you have two options. The first option is to nest a {{code "<div>"}} inside each Grid unit and style the child container:
+        两种可以设置，第一是用 {{code "<div>"}} 把单元格包起来，对{{code "<div>"}}进行设置：
     </p>
 
   {{#code}}
@@ -202,7 +202,7 @@
   {{/code}}
 
     <p>
-        The second option is to add borders and padding directly to a grid unit. This would ordinarily risk breaking the layout, but you can easily avoid this problem by augmenting the behavior of the grid itself with a {{code "box-sizing: border-box"}} rule:
+        第二种方法是直接设置单元格，但可能破坏布局，需要为单元格添加如下样式来避免：
     </p>
 
   {{#code}}
@@ -210,15 +210,15 @@
   {{/code}}
 
     <p>
-        Using {{code "box-sizing: border-box"}} keeps your markup cleaner, but has two minor drawbacks. Legacy browsers such as IE 7 and below <a href="http://caniuse.com/#search=box-sizing">lack support</a> for {{code "box-sizing"}}, and setting this property on all grid units makes it harder to override or unset the value later on. As an unopinionated library, Pure lets {{code "box-sizing"}} remain at the default value of {{code "content-box"}} and leaves the choice up to you.
+        用 {{code "box-sizing: border-box"}} 可以保持代码简洁，但是有两个缺点。第一，老的浏览器不支持{{code "box-sizing"}}，第二，这么写修改了全部的单元格，以后很难覆盖或取消了。Pure默认设置{{code "box-sizing"}} 为{{code "content-box"}}，要怎么改自己选。
     </p>
 
 
-    {{sectionHeading "Using Grids with Your Font-Family"
+    {{sectionHeading "设置栅格的Font-Family"
                   id="using-grids-with-custom-fonts" }}
 
     <p>
-        Pure Grids use a specific font stack to ensure the greatest OS/browser compatibility, and by default grid units will have {{code "font-family: sans-serif;"}} applied — this is the default font stack Pure's Base (Normalize.css) applies to {{code "<html>"}}, {{code "<button>"}}, {{code "<input>"}}, {{code "<select>"}}, and {{code "<textarea>"}} elements. Fortunately, it's quite easy to make sure your project's font stack applies to all content when using Pure. Instead of applying your {{code "font-family"}} to only the {{code "<body>"}} element, apply it like this:
+        Pure栅格使用特定的字体栈来最大限度兼容苹果os的浏览器。单元格默认 {{code "font-family: sans-serif;"}}这是Pure的核心(Normalize.css)设置的。另外这些元素也被设置了：{{code "<html>"}}, {{code "<button>"}}, {{code "<input>"}}, {{code "<select>"}}, 和 {{code "<textarea>"}} 。 要修改也很简单，请看：
     </p>
 
   {{#code}}
@@ -226,10 +226,10 @@
   {{/code}}
 
 
-    {{sectionHeading "Want to just use Grids?"}}
+    {{sectionHeading "如何只用栅格模块？"}}
 
     <p>
-        Grids is part of the Pure CSS file. However, if you just want Grids and not the other modules, you can pull it down separately. Just include this {{code "<link>"}} element in your {{code "<head>"}}.
+        {{code "<head>"}}里直接引用{{code "<link>"}}就可以了。大陆用户建议下载文件到本地使用。
     </p>
 
   {{#code}}
@@ -243,7 +243,7 @@
 
     <aside>
         <p>
-            Optionally, you can head over to the <a href="/start/#build-your-pure-starter-kit">Get Started</a> page to make your very own grid with custom media query breakpoints and column sizes. Download the CSS and HTML file when you're done and get started quickly!
+            也可以<a href="/start/#build-your-pure-starter-kit">自定义</a>。
         </p>
     </aside>
 </div>

@@ -1,5 +1,5 @@
-{{setTitle     "Layouts"}}
-{{setSubTitle  "Quickstart your next web project with these example layouts."}}
+{{setTitle     "模板"}}
+{{setSubTitle  "利用下面的模板，快速创建你的项目"}}
 {{setActiveNav "layouts"}}
 
 {{addLocalCSS "/css/layouts.css"}}
@@ -8,14 +8,14 @@
 {{> header}}
 
 <div class="content">
-    {{sectionHeading "Common Layouts"}}
+    {{sectionHeading "通用模板"}}
     <p>
-        Pure was crafted with the goal that it can be used in every web project. To showcase this, we've made some common layouts that leverage Pure. These layouts are responsive and don't use any JavaScript.
+        Pure精心设计，只为可以在任何Web项目中使用。为了例证这一点，我们制作了如下几个模板。这些模板都是响应式的，并且没有使用任何JavaScript。
     </p>
 
     <aside>
         <p>
-            When viewing these layouts, view or copy the source to get a good understanding of what's happening.
+            查看或者复制这些模板源码，有助于理解Pure。
         </p>
     </aside>
 
@@ -44,11 +44,11 @@
 
             <p>
                 <a href="{{pathTo 'layout' layout=name}}"
-                   class="pure-button pure-button-primary">View</a>
+                   class="pure-button pure-button-primary">查看</a>
 
                 <a download href="{{pathTo 'layout-download' layout=name}}"
                    onclick="return Pure.trackDownload.call(this, 'layouts', '{{name}}');"
-                   class="pure-button">Download</a>
+                   class="pure-button">下载</a>
             </p>
         </div>
     </div>

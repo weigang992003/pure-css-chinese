@@ -129,17 +129,17 @@ function page(path, name, label, callbacks) {
 // Basic docs pages.
 
 page('/',           'home');
-page('/start/',     'start',     'Get Started', routes.start.index);
-page('/layouts/',   'layouts',   'Layouts',     routes.layouts.index);
-page('/base/',      'base',      'Base');
-page('/grids/',     'grids',     'Grids');
-page('/forms/',     'forms',     'Forms');
-page('/buttons/',   'buttons',   'Buttons');
-page('/tables/',    'tables',    'Tables');
-page('/menus/',     'menus',     'Menus');
-page('/tools/',     'tools',     'Tools');
-page('/customize/', 'customize', 'Customize');
-page('/extend/',    'extend',    'Extend');
+page('/start/',     'start',     '开始使用', routes.start.index);
+page('/layouts/',   'layouts',   '模板',     routes.layouts.index);
+page('/base/',      'base',      '基础');
+page('/grids/',     'grids',     '栅格');
+page('/forms/',     'forms',     '表单');
+page('/buttons/',   'buttons',   '按钮');
+page('/tables/',    'tables',    '表格');
+page('/menus/',     'menus',     '菜单');
+page('/tools/',     'tools',     '工具');
+page('/customize/', 'customize', '自定义');
+page('/extend/',    'extend',    '扩展');
 
 // Layout examples.
 

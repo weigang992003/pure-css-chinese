@@ -1,5 +1,5 @@
-{{setTitle     "Menus"}}
-{{setSubTitle  "Simple CSS for menus."}}
+{{setTitle     "菜单"}}
+{{setSubTitle  "简单的菜单样式"}}
 {{setActiveNav "menus"}}
 
 {{addLocalCSS "/css/menus.css"}}
@@ -8,9 +8,9 @@
 
 <div class="content">
 
-    {{sectionHeading "Horizontal Menu"}}
+    {{sectionHeading "横向菜单"}}
     <p>
-        To create a horizontal menu, add the {{code "pure-menu-horizontal"}} class name. You can mark the active list element by adding the {{code "pure-menu-selected"}} class to the list element.
+        添加class {{code "pure-menu-horizontal"}} 可实现横向菜单效果，选中菜单class： {{code "pure-menu-selected"}} 。
     </p>
 
     {{> menus/horizontal}}
@@ -20,9 +20,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Menu with Headings"}}
+    {{sectionHeading "菜单前加标题"}}
     <p>
-        To add headings to your menu, place some content outside the {{code "<ul>"}} element and wrap it in an {{code "<a>"}} element with the {{code "pure-menu-heading"}} class name.
+        在{{code "<ul>"}} 前用 {{code "<a>"}} 元素把标题包起来，再给{{code "<a>"}}加个class {{code "pure-menu-heading"}} 。
     </p>
 
     {{> menus/heading}}
@@ -32,9 +32,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Vertical Menu"}}
+    {{sectionHeading "纵向菜单"}}
     <p>
-        Menus are vertical by default. You need only add the {{code "pure-menu"}} class to style the menu, and the {{code "pure-menu-open"}} class to ensure that it is visible.
+        菜单默认就是纵向的，添加class {{code "pure-menu"}} 就可以了，添加 {{code "pure-menu-open"}} 显示菜单。
     </p>
 
     {{> menus/vertical}}
@@ -44,9 +44,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Add Dropdowns to Menus"}}
+    {{sectionHeading "下拉菜单"}}
     <p>
-        Adding dropdowns to menus requires the use of JavaScript. For example, YUI's {{code "Y.Menu"}} module adds dropdown functionality and the ability to create JavaScript menus.
+        下拉菜单需要使用JavaScript，比如利用 {{code "Y.Menu"}} 提供的下拉菜单模块。
     </p>
 
     {{> menus/dropdown}}
@@ -63,9 +63,9 @@
 {{/code}}
 
 
-    {{sectionHeading "Menus with Disabled Items"}}
+    {{sectionHeading "带有禁用项的菜单"}}
     <p>
-        To mark a link as disabled, add an {{code "<a>"}} element with the {{code "pure-menu-disabled"}} class name. Disabled items appear faded and do not inherit hover styles.
+        给 {{code "<a>"}} 添加class {{code "pure-menu-disabled"}} 可实现禁用的效果。
     </p>
 
     {{> menus/disabled}}
@@ -75,9 +75,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Paginators"}}
+    {{sectionHeading "分页"}}
     <p>
-        To create a paginator control, add the {{code "pure-paginator"}} classname to a {{code "<ul>"}} element. For paginator controls that look like buttons, add the {{code "pure-button"}} class name. For a plainer paginator, you can omit this class.
+        给{{code "<ul>"}} 加class {{code "pure-paginator"}} 可实现分页效果，如果再添加 {{code "pure-button"}} 可实现按钮效果。
     </p>
 
     {{> menus/paginator}}

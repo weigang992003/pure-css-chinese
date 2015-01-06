@@ -1,14 +1,14 @@
-{{setTitle     "Tables"}}
-{{setSubTitle  "Simple CSS for HTML tables."}}
+{{setTitle     "表格"}}
+{{setSubTitle  "简单的表格样式"}}
 {{setActiveNav "tables"}}
 
 {{> header}}
 
 <div class="content">
 
-    {{sectionHeading "Default Table"}}
+    {{sectionHeading "默认表格"}}
     <p>
-        To style an HTML table, add the {{code "pure-table"}} classname. This class adds padding and borders to table elements, and emphasizes the header.
+        给table添加class {{code "pure-table"}} 可以添加默认的padding、border，同时突出表头。
     </p>
 
     {{> tables/default}}
@@ -18,9 +18,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Bordered Table"}}
+    {{sectionHeading "有边框的表格"}}
     <p>
-        To add horizontal and vertical borders to all cells, add the {{code "pure-table-bordered"}} classname to the {{code "<table>"}} element.
+        在默认表格上加class {{code "pure-table-bordered"}} 。
     </p>
 
     {{> tables/bordered}}
@@ -30,9 +30,9 @@
   {{/code}}
 
 
-    {{sectionHeading "Table with Horizontal Borders"}}
+    {{sectionHeading "有水平边框的表格"}}
     <p>
-        If you prefer horizontal lines only, add the {{code "pure-table-horizontal"}} classname to the {{code "<table>"}} element.
+        在默认表格上加class {{code "pure-table-horizontal"}} 。
     </p>
 
     {{> tables/horizontal}}
@@ -42,13 +42,13 @@
   {{/code}}
 
 
-    {{sectionHeading "Striped Table"}}
+    {{sectionHeading "斑马纹式的表格"}}
     <p>
-        Large tables are easier to parse visually if rows are easily distinguishable. Adding the {{code "pure-table-odd"}} class name to every other {{code "<tr>"}} element changes the background of the row and creates a zebra-styled effect.
+        为了让比较大的表格看起来容易区分行。隔行添加class {{code "pure-table-odd"}} 可实现斑马纹的效果。
     </p>
 
     <p>
-        <b>Note:</b> In browsers which support the CSS3 <a href="http://caniuse.com/#search=nth-child">{{code "nth-child"}} pseudo selector</a> a simpler approach can be used. The {{code "pure-table-striped"}} classname can be added to the {{code "<table>"}} element and the zebra-styled striping will happen automatically. This approach will <em>not</em> work in Internet Explorer 8 or lower.
+        <b>注意:</b> 支持CSS3 <a href="http://caniuse.com/#search=nth-child">伪类选择器 {{code "nth-child"}} </a>的浏览器，给table添加class {{code "pure-table-striped"}} 就可以自动生成斑马纹效果，IE8及以下版本不支持。
     </p>
 
     {{> tables/striped}}

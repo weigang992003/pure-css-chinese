@@ -1,5 +1,5 @@
-{{setTitle         "Get Started"}}
-{{setSubTitle      "Start your next web project with Pure."}}
+{{setTitle         "开始使用"}}
+{{setSubTitle      "下个项目，务必使用Pure"}}
 {{setActiveNav     "start"}}
 {{setLoadYUI       true}}
 {{setYUIBoot       "start/app"}}
@@ -11,10 +11,10 @@
 {{> header}}
 
 <div class="content">
-    {{sectionHeading "Add Pure to Your Page"}}
+    {{sectionHeading "页面中引入Pure"}}
 
     <p>
-        You can add Pure to your page via <b>Yahoo's free CDN</b>. Just add the following {{code "<link>"}} element into your page's {{code "<head>"}}, before your project's stylesheets.
+        可以使用雅虎免费的<b>CDN</b>，把下面一行加入页面的{{code "<head>"}}。
     </p>
 </div>
 
@@ -27,14 +27,14 @@
 <div class="content">
     <aside>
         <p>
-            Alternatively, you can <a href="https://github.com/yahoo/pure-release/archive/v{{pure.version}}.zip">download Pure</a>, or <a href="{{pathTo 'customize'}}">check out other CDNs</a> that host Pure.
+            由于某些原因，咱们一般需要<a href="https://github.com/yahoo/pure-release/archive/v{{pure.version}}.zip">下载 Pure</a>。这里也有一些<a href="{{pathTo 'customize'}}">其它的CDN</a>。
         </p>
     </aside>
 
-    {{sectionHeading "Add the Viewport Meta Element"}}
+    {{sectionHeading "添加 Viewport Meta 元素"}}
 
     <p>
-        The viewport {{code "meta"}} element lets you control the the width and scale of the viewport on mobile browsers. Since you're building a responsive website, you want the width to be equal to the device's native width. Add this into your page's {{code "<head>"}}.
+        viewport {{code "meta"}} 元素控制移动端浏览器的宽度和缩放。为了自适应设备的宽度，下面一行加入 {{code "<head>"}}。
     </p>
 </div>
 
@@ -45,14 +45,14 @@
 </div>
 
 <div class="content">
-    {{sectionHeading "Understand Pure Grids"}}
+    {{sectionHeading "理解Pure的栅格（Grids）"}}
 
     <p>
-        Pure's grid system is very simple. You create a row by using the {{code ".pure-g"}} class, and create columns within that row by using the {{code "pure-u-*"}} classes.
+        类似Excel表格或CSS的table，创建行用 {{code ".pure-g"}} 类，在行中创建列用 {{code "pure-u-*"}} 类.
     </p>
 
     <p>
-        Here's a grid with three columns:
+        1行3列的栅格：
     </p>
 
   {{#code}}
@@ -65,14 +65,14 @@
 </div>
 
 <div class="content">
-    {{sectionHeading "Responsive Grids"}}
+    {{sectionHeading "响应式栅格"}}
 
     <p>
-        Pure's grid system is also <b>mobile-first</b> and <b>responsive</b>, and you're able to customize the grid by specifying CSS Media Query breakpoints and grid classnames. If needed, you can <a href="#build-your-pure-starter-kit">customize Pure Grids below</a>, but let's start off with an example.
+        Pure的栅格系统是<b>移动设备优先</b>、<b>响应式</b>的，你也可以<a href="#build-your-pure-starter-kit">自定义</a>CSS媒体查询和栅格的class名，我们先来看个普通使用的例子。
     </p>
 
     <p>
-        You'll need to <em>also</em> include Pure's {{code "grids-responsive.css"}} onto your page:
+        首先引入 {{code "grids-responsive.css"}} ：
     </p>
 
   {{#code}}
@@ -80,7 +80,7 @@
   {{/code}}
 
     <p>
-        Here's the default responsive breakpoints included in {{code "grids-responsive.css"}}:
+        下面是 {{code "grids-responsive.css"}} 文件中默认的响应判断：
     </p>
 
     <div class="table-responsive">
@@ -88,7 +88,7 @@
     </div>
 
     <p>
-        Here's an example of what you'd be able to do. <i>Try resizing your screen to see how the grid responds.</i>
+        下面是例子，<i>缩放你的浏览器看下效果。</i>
     </p>
 </div>
 
@@ -99,25 +99,25 @@
 <div class="content">
     <aside>
         <p>
-            <a href="{{pathTo 'grids'}}#pure-responsive-grids">Learn More</a> about how to include and use Pure's Responsive Grids system, and how it compares to Basic Grids.
+            <a href="{{pathTo 'grids'}}#pure-responsive-grids">继续学习</a>如何使用栅格系统。
         </p>
     </aside>
 
-    {{sectionHeading "Build Your Pure Starter Kit"}}
+    {{sectionHeading '创建Pure初始页的小工具' id='build-your-pure-starter-kit'}}
 
     <p>
-        Now that you know how grids work, you might want to customize things to better suit your web project. You can define your own breakpoints by specifying a CSS Media Queries. You can also customize the number of columns that your layout needs.
+        你已经知道栅格如何应用了，你可以自定义CSS媒体查询、布局的列数。
     </p>
 
     <p>
-        We'll generate an {{code "index.html"}} file, and if needed, a {{code "grid.css"}} file that you can download and use as the starting-point for your project.
+        下面的小工具将生成 {{code "index.html"}} 文件（如果需要的话，也生成 {{code "grid.css"}}），你可以下载后作为项目的初始文件。
     </p>
 
     {{> start/grid-input-view}}
 
     <div class="grid-download">
         <p>
-            Your Pure Starter Kit will be generated below in real-time as you make your customizations. When you're ready, just download it!
+            下面是实时的预览，设置完成后下载即可。
         </p>
     </div>
 
@@ -125,7 +125,7 @@
 
     <aside>
         <p>
-            After downloading your Starter Kit, we recommend checking out <a href="{{pathTo 'layouts'}}">our awesome layouts</a>. They're freely available to download. Use them to get started quickly with your next web project. Happy coding!
+            推荐几套<a href="{{pathTo 'layouts'}}">相当不错的模板</a>，都不要钱~
         </p>
     </aside>
 </div>

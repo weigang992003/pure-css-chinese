@@ -2,43 +2,43 @@
     <ul class="grid-tabs pure-g">
         <li class="grid-tab pure-u">
             <a data-action="tab" class="grid-tab-link-selected grid-tab-link" href="#mqs">
-                Media Queries
+                媒体查询（Media Queries）
             </a>
         </li>
         <li class="grid-tab pure-u">
             <a data-action="tab" class="grid-tab-link" href="#options">
-                Grid Options
+                栅格选项
             </a>
         </li>
     </ul>
 
     <div class="grid-content">
         <form id="mqs" class="grid-panel-selected grid-panel pure-form-aligned pure-form">
-            <h3>Grids Media Queries</h3>
+            <h3>栅格媒体查询</h3>
 
             <p>
-                You can use Pure's default CSS Media Queries which will add {{code "grids-responsive.css"}} to your Pure Starter Kit, or we can generate a mobile-first, responsive grid if you provide us with the breakpoints.
+                你可以使用Pure默认的CSS媒体查询，或者在下面自定义。
             </p>
 
             <p>
-                Pure's generated Responsive Grids is simple to use. It provides you with a specific CSS classname for each Media Query. For example, {{code "pure-u-md-*"}} for devices with {{code "width >= 768px"}}, and {{code "pure-u-lg-*"}} for devices with {{code "width >= 1024px"}}.
+                Pure生成的响应式栅格使用简单，每个CSS媒体查询对应一种class命名规则。例如 {{code "pure-u-md-*"}} 对应设备 {{code "width >= 768px"}}， {{code "pure-u-lg-*"}} 对应设备 {{code "width >= 1024px"}}.
             </p>
 
             <p>
-                What Media Queries should your grid system respond to?
+				你要使用啥样的媒体查询？
             </p>
 
             <table id="media-query-table" {{#unless mediaQueries}}hidden{{/unless}}>
                 <thead>
                     <tr class="pure-g">
                         <th class="pure-u-6-24">
-                            Grid Key <br>
+                            关键字 <br>
                             <span class="media-query-table-example">
-                                {{code ".pure-u-{key}-*"}}
+                                {{code ".pure-u-{关键字}-*"}}
                             </span>
                         </th>
                         <th class="pure-u-15-24 pure-u-sm-16-24">
-                            Media Query <br>
+                            媒体查询规则 <br>
                             <span class="media-query-table-example">
                                 {{code "screen and (min-width: 48em)"}}
                             </span>
@@ -54,29 +54,29 @@
 
             <div class="controls">
                 <button type="button" data-action="add-default-mq" class="pure-button pure-button-primary">
-                    Use Default Media Queries
+                    使用默认媒体查询
                 </button>
                 <button type="button" data-action="add-mq" class="pure-button">
-                    Add Media Query
+                    添加媒体查询
                 </button>
             </div>
         </form>
 
         <form id="options" class="grid-panel pure-form-aligned pure-form">
-            <h3>Grid Options</h3>
+            <h3>栅格选项</h3>
 
             <p>
-                Pure has a 5<sup>ths</sup> and 24<sup>ths</sup>-column grid system by default. You define an element's width using fractional classnames, e.g; {{code ".pure-u-2-5"}} for {{code "width: 40%"}}, or {{code ".pure-u-12-24"}} for {{code "width: 50%"}}. You can <a href="{{pathTo 'grids'}}#grids-units-sizes">view all the grid units</a> that are available in the default grid.
+                Pure默认使用5列和24列的栅格系统。你可以用分数形式的class名定义元素宽度，例如 {{code ".pure-u-2-5"}} 即 {{code "width: 40%"}}，或 {{code ".pure-u-12-24"}} 即 {{code "width: 50%"}}。可以看一下默认的<a href="{{pathTo 'grids'}}#grids-units-sizes">栅格单元格</a>。
             </p>
 
             <p>
-                You can customize the number of columns; the default grid is 24 columns. You can also change the Grids classname prefix; the default is {{code ".pure-u-"}}.
+                你可以自定义列数，默认是24列。也可以修改class名的前缀，默认是 {{code ".pure-u-"}}。
             </p>
 
             <div>
                 <div class="cols-control pure-control-group">
                     <label for="cols-input">
-                        Number of Columns
+                        列数
                     </label>
                     <input id="cols-input" data-content="cols-input"
                            type="number" min="2" max="100" placeholder="24"
@@ -85,7 +85,7 @@
 
                 <div class="prefix-control pure-control-group">
                     <label for="prefix-input">
-                        Grid Prefix
+                        前缀
                     </label>
                     <input id="prefix-input" data-content='prefix-input'
                            type="text" maxlength="20" placeholder=".pure-u-"
