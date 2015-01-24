@@ -5,7 +5,7 @@ The website which showcases [Pure CSS][Pure].
 
 [Pure]: http://www.purecss.org
 
-
+forked from https://github.com/yahoo/pure-site
 Running Locally
 ---------------
 
